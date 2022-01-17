@@ -1,4 +1,7 @@
-
+/*
+Copyright (c) 2022, Francesco Maresca, all rights reserved.
+Authors: @programmerhelloworld (Francesco Maresca)
+*/
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
