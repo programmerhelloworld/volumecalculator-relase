@@ -69,11 +69,6 @@ cin >> height;
 parvol = side1 * side2 * height;
 
 cout << "The volume of the rectangular parallelepiped is " << parvol << "." << endl;
-
-
-
-
-
 }
 
 
