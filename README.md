@@ -1,7 +1,7 @@
 # volumecalculator-relase
 
 
-Copyright (c) 2022, Francesco Maresca, all rights included.
+Copyright (©) 2022, Francesco Maresca, all rights included.
 
 #Version Relase 1.0 17/01/2022
 
