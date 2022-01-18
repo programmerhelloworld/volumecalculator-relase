@@ -69,7 +69,7 @@ public class GUI {
      * Initialize the contents of the frame.
      */
     private void initialize() {
-        frame = new JFrame();
+        frame = new JFrame("Francesco Maresca's Volume Calculator");
         frame.setResizable(false);
         frame.setBounds(100, 100, 673, 404);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
