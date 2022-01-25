@@ -45,9 +45,9 @@ cout << "The volume of the cube is " << vol << "." << endl;
     float pyvol;
     
 
-	cout << "Give the side of the triangle: " << endl;
+	cout << "Give the side of the base: " << endl;
 	cin >> side;
-	cout << "Give the height of the cube: " << endl;	
+	cout << "Give the height of the pyramid: " << endl;	
 	cin >> height;
 	
 	area = side * side;
