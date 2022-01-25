@@ -3,6 +3,11 @@
 
 Copyright (©) 2022, Francesco Maresca, all rights included.
 
+#Console Python Version Relase 25/01/2022
+
+-Written in Python
+-Command Line Interface
+
 #Version Relase 1.0 17/01/2022
 
 -Written in Java
