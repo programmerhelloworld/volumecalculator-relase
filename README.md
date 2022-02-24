@@ -11,7 +11,7 @@ Copyright (©) 2022, Francesco Maresca, all rights included.
 #Version Relase 1.0 17/01/2022
 
 -Written in Java
--Graphical User Interface
+-Graphical User Interface. (Code not available)
 
 #Version Beta 1.5 16/01/2022
 
