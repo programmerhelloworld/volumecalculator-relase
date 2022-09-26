@@ -3,12 +3,13 @@
 
 Copyright (©) 2022, Francesco Maresca, all rights included.
 
-#Console Python Version Relase 25/01/2022
+
 
 #Version Relase 2.0 (September 26th 2022)
 
 - G.U.I. Java Version Relased Again!
 
+#Console Python Version Relase 25/01/2022
 
 -Written in Python
 -Command Line Interface
