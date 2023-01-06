@@ -1,6 +1,6 @@
 /*
 Volume Calculator 2.0
-Copyright (c) 2022, Francesco Maresca. All rights reserved.
+Copyright (c) 2023, Francesco Maresca. All rights reserved.
 Authors: @programmerhelloworld (Francesco Maresca)
 */
 import java.awt.EventQueue;
