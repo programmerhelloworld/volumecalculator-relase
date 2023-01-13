@@ -3,7 +3,7 @@
 
 Copyright (©) 2023 Francesco Maresca, all rights included.
 
-#Version 2.1 (Jan 13 2023)
+#Version 2.1 (Jan 13th 2023)
 
 - G.U.I Bugfix
 
