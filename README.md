@@ -1,9 +1,11 @@
 # volumecalculator-relase
 
 
-Copyright (©) 2022, Francesco Maresca, all rights included.
+Copyright (©) 2023 Francesco Maresca, all rights included.
 
+#Version 2.1 (Jan 13 2023)
 
+- G.U.I Bugfix
 
 #Version Relase 2.0 (September 26th 2022)
 
