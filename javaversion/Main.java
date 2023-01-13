@@ -1,8 +1,8 @@
 /*
-Volume Calculator 2.0
-Copyright (c) 2023, Francesco Maresca. All rights reserved.
-Authors: @programmerhelloworld (Francesco Maresca)
+Francesco Maresca's Maresca Math Tools. 
+Copyright (C) 2023 Francesco Maresca (@programmerhelloworld). All rights reserved.
 */
+package com.francescomaresca.marescamathtools.main;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -15,81 +15,44 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import javax.swing.JSeparator;
+import com.francescomaresca.marescamathtools.main.GUI;
+import java.awt.Color;
 
-public class GUI {
+public class VolumeCalculator {
 
-    private JFrame frame;
-    private JTextField textField;
-    private JTextField textField_1;
-    private JTextField textField_2;
-    private JTextField textField_3;
-    private JTextField textField_4;
-    private JButton btnNewButton_1;
-    private JTextField txtSide;
-    private JTextField txtHeight;
-    private JTextField txtSide_1;
-    private JTextField txtResult;
-    private JTextField txtCubeArea;
-    private JTextField txtPyramidArea;
-    private JTextField txtRectangularParallelepiped;
-    private JButton btnNewButton_2;
-    private JTextField textField_5;
-    private JTextField textField_6;
-    private JTextField textField_7;
-    private JTextField txtSide_2;
-    private JTextField txtSide_3;
-    private JTextField txtSide_4;
-    private JTextField textField_8;
-    private JTextField textField_9;
-    private JTextField textField_10;
 
     /**
      * Launch the application.
      */
     public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    GUI window = new GUI();
-                    window.frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
+    	JFrame frmVolumeCalculator = new JFrame("Francesco Maresca's Volume Calculator");
+    	frmVolumeCalculator.setTitle("Volume Calculator - Maresca Math Tools");
+    	frmVolumeCalculator.getContentPane().setBackground(Color.WHITE);
+        frmVolumeCalculator.setResizable(false);
+        frmVolumeCalculator.setBounds(100, 100, 673, 404);
+        frmVolumeCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmVolumeCalculator.setVisible(true);
 
-    /**
-     * Create the application.
-     */
-    public GUI() {
-        initialize();
-    }
-
-    /**
-     * Initialize the contents of the frame.
-     */
-    private void initialize() {
-        frame = new JFrame("Francesco Maresca's Volume Calculator");
-        frame.setResizable(false);
-        frame.setBounds(100, 100, 673, 404);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        textField = new JTextField();
+        JTextField textField = new JTextField();
+        textField.setBackground(Color.LIGHT_GRAY);
         textField.setEditable(false);
         textField.setColumns(10);
 
-        textField_1 = new JTextField();
+        JTextField textField_1 = new JTextField();
+        textField_1.setBackground(Color.LIGHT_GRAY);
         textField_1.setEditable(false);
         textField_1.setColumns(10);
 
-        textField_2 = new JTextField();
+        JTextField textField_2 = new JTextField();
+        textField_2.setBackground(Color.LIGHT_GRAY);
         textField_2.setColumns(10);
 
-        textField_3 = new JTextField();
+        JTextField textField_3 = new JTextField();
+        textField_3.setBackground(Color.LIGHT_GRAY);
         textField_3.setColumns(10);
 
-        textField_4 = new JTextField();
+        JTextField textField_4 = new JTextField();
+        textField_4.setBackground(Color.LIGHT_GRAY);
         textField_4.setColumns(10);
 
         JButton btnNewButton = new JButton("Calculate pyramid volume");
@@ -109,7 +72,7 @@ public class GUI {
             }
         });
 
-        btnNewButton_1 = new JButton("Calculate cube volume");
+        JButton btnNewButton_1 = new JButton("Calculate cube volume");
         btnNewButton_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
@@ -124,53 +87,70 @@ public class GUI {
             }
         });
 
-        txtSide = new JTextField();
+        JTextField txtSide = new JTextField();
         txtSide.setText("Side");
         txtSide.setEditable(false);
-        txtSide.setBackground(SystemColor.window);
+        txtSide.setBackground(Color.WHITE);
         txtSide.setColumns(10);
 
-        txtHeight = new JTextField();
+        JTextField txtHeight = new JTextField();
         txtHeight.setText("Height");
         txtHeight.setEditable(false);
         txtHeight.setColumns(10);
-        txtHeight.setBackground(SystemColor.window);
+        txtHeight.setBackground(Color.WHITE);
 
-        txtSide_1 = new JTextField();
+        JTextField txtSide_1 = new JTextField();
         txtSide_1.setText("Side");
         txtSide_1.setEditable(false);
         txtSide_1.setColumns(10);
-        txtSide_1.setBackground(SystemColor.window);
+        txtSide_1.setBackground(Color.WHITE);
 
-        txtResult = new JTextField();
+        JTextField txtResult = new JTextField();
         txtResult.setText("Result");
         txtResult.setEditable(false);
         txtResult.setColumns(10);
-        txtResult.setBackground(SystemColor.window);
+        txtResult.setBackground(Color.WHITE);
 
-        txtCubeArea = new JTextField();
-        txtCubeArea.setText("Cube Area");
+        JTextField txtCubeArea = new JTextField();
+        txtCubeArea.setText("Cube Volume");
         txtCubeArea.setEditable(false);
         txtCubeArea.setColumns(10);
-        txtCubeArea.setBackground(SystemColor.window);
+        txtCubeArea.setBackground(Color.WHITE);
 
-        txtPyramidArea = new JTextField();
-        txtPyramidArea.setText("Pyramid Area");
+        JTextField txtPyramidArea = new JTextField();
+        txtPyramidArea.setText("Pyramid Volume");
         txtPyramidArea.setEditable(false);
         txtPyramidArea.setColumns(10);
-        txtPyramidArea.setBackground(SystemColor.window);
+        txtPyramidArea.setBackground(Color.WHITE);
 
         JSeparator separator = new JSeparator();
 
         JSeparator separator_1 = new JSeparator();
 
-        txtRectangularParallelepiped = new JTextField();
+        JTextField txtRectangularParallelepiped = new JTextField();
         txtRectangularParallelepiped.setText("Rectangular parallelepiped");
         txtRectangularParallelepiped.setEditable(false);
         txtRectangularParallelepiped.setColumns(10);
-        txtRectangularParallelepiped.setBackground(SystemColor.window);
+        txtRectangularParallelepiped.setBackground(Color.WHITE);
 
-        btnNewButton_2 = new JButton("Calculate rectang. volume");
+        JTextField textField_5 = new JTextField();
+        textField_5.setBackground(Color.LIGHT_GRAY);
+        textField_5.setColumns(10);
+
+        JTextField textField_6 = new JTextField();
+        textField_6.setBackground(Color.LIGHT_GRAY);
+        textField_6.setColumns(10);
+        
+        JTextField textField_7 = new JTextField();
+        textField_7.setBackground(Color.LIGHT_GRAY);
+        textField_7.setColumns(10);
+        
+        JTextField textField_8 = new JTextField();
+        textField_8.setBackground(Color.LIGHT_GRAY);
+        textField_8.setEditable(false);
+        textField_8.setColumns(10);
+        
+        JButton btnNewButton_2 = new JButton("Calculate rectang. volume");
         btnNewButton_2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
@@ -184,181 +164,193 @@ public class GUI {
             }
         });
 
-        textField_5 = new JTextField();
-        textField_5.setColumns(10);
+        
 
-        textField_6 = new JTextField();
-        textField_6.setColumns(10);
+        
 
-        textField_7 = new JTextField();
-        textField_7.setColumns(10);
-
-        txtSide_2 = new JTextField();
+        JTextField txtSide_2 = new JTextField();
         txtSide_2.setText("Side 1");
         txtSide_2.setEditable(false);
         txtSide_2.setColumns(10);
-        txtSide_2.setBackground(SystemColor.window);
+        txtSide_2.setBackground(Color.WHITE);
 
-        txtSide_3 = new JTextField();
+        JTextField txtSide_3 = new JTextField();
         txtSide_3.setText("Side 2");
         txtSide_3.setEditable(false);
         txtSide_3.setColumns(10);
-        txtSide_3.setBackground(SystemColor.window);
+        txtSide_3.setBackground(Color.WHITE);
 
-        txtSide_4 = new JTextField();
+        JTextField txtSide_4 = new JTextField();
         txtSide_4.setText("Height");
         txtSide_4.setEditable(false);
         txtSide_4.setColumns(10);
-        txtSide_4.setBackground(SystemColor.window);
+        txtSide_4.setBackground(Color.WHITE);
 
-        textField_8 = new JTextField();
-        textField_8.setEditable(false);
-        textField_8.setColumns(10);
+        
 
-        textField_9 = new JTextField();
+        JTextField textField_9 = new JTextField();
         textField_9.setText("Result");
         textField_9.setEditable(false);
         textField_9.setColumns(10);
-        textField_9.setBackground(SystemColor.window);
+        textField_9.setBackground(Color.WHITE);
 
-        textField_10 = new JTextField();
+        JTextField textField_10 = new JTextField();
         textField_10.setText("Result");
         textField_10.setEditable(false);
         textField_10.setColumns(10);
-        textField_10.setBackground(SystemColor.window);
-        GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
+        textField_10.setBackground(Color.WHITE);
+        
+        JButton btnNewButton_3 = new JButton("Menu");
+        btnNewButton_3.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		
+        		VolumeCalculator vol = new VolumeCalculator();
+        	
+        		frmVolumeCalculator.dispose();
+        	
+        		
+        		GUI abc = new GUI();
+        		abc.main(args);
+        	}
+        	
+        });
+        
+        
+        GroupLayout groupLayout = new GroupLayout(frmVolumeCalculator.getContentPane());
         groupLayout.setHorizontalGroup(
-                groupLayout.createParallelGroup(Alignment.LEADING)
-                        .addGroup(groupLayout.createSequentialGroup()
-                                .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-                                                        .addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                                        .addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 153, GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(txtSide_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(txtCubeArea, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addGap(20)
-                                                .addComponent(txtResult, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE)))
-                                .addGap(44)
-                                .addComponent(separator, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addGap(65)
-                                                .addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-                                                        .addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txtSide, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txtHeight, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txtPyramidArea, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addGap(34)
-                                                .addComponent(btnNewButton))
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addGap(65)
-                                                .addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addGap(75)
-                                                .addComponent(textField_9, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                .addComponent(txtRectangularParallelepiped, GroupLayout.PREFERRED_SIZE, 194, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addGap(75)
-                                                .addComponent(textField_10, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addGap(42)
-                                                .addComponent(textField_8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addGap(30)
-                                                .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-                                                        .addComponent(txtSide_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txtSide_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txtSide_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(btnNewButton_2, GroupLayout.PREFERRED_SIZE, 195, GroupLayout.PREFERRED_SIZE))))
-                                .addGap(222)
-                                .addComponent(separator_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addGap(122))
+        	groupLayout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(groupLayout.createSequentialGroup()
+        			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addContainerGap()
+        					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+        						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+        				.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 153, GroupLayout.PREFERRED_SIZE)
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addContainerGap()
+        					.addComponent(txtSide_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addContainerGap()
+        					.addComponent(txtCubeArea, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addGap(20)
+        					.addComponent(txtResult, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE)))
+        			.addGap(44)
+        			.addComponent(separator, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addGap(65)
+        					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+        						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(txtSide, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(txtHeight, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(txtPyramidArea, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addGap(34)
+        					.addComponent(btnNewButton))
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addGap(65)
+        					.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addGap(75)
+        					.addComponent(textField_9, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE)))
+        			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addPreferredGap(ComponentPlacement.RELATED)
+        					.addComponent(txtRectangularParallelepiped, GroupLayout.PREFERRED_SIZE, 194, GroupLayout.PREFERRED_SIZE))
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addGap(75)
+        					.addComponent(textField_10, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE))
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addGap(42)
+        					.addComponent(textField_8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addGap(30)
+        					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+        						.addComponent(txtSide_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(txtSide_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(txtSide_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(btnNewButton_2, GroupLayout.PREFERRED_SIZE, 195, GroupLayout.PREFERRED_SIZE))))
+        			.addGap(222)
+        			.addComponent(separator_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        		.addGroup(groupLayout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(btnNewButton_3))
         );
         groupLayout.setVerticalGroup(
-                groupLayout.createParallelGroup(Alignment.TRAILING)
-                        .addGroup(groupLayout.createSequentialGroup()
-                                .addGap(34)
-                                .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(txtCubeArea, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtPyramidArea, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                                .addComponent(txtSide, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(ComponentPlacement.RELATED)
-                                .addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addGap(9)
-                                .addComponent(txtSide_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(ComponentPlacement.RELATED)
-                                .addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(ComponentPlacement.UNRELATED)
-                                                .addComponent(btnNewButton)
-                                                .addGap(18)
-                                                .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-                                                        .addComponent(textField_9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(textField_10, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(ComponentPlacement.RELATED))
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(ComponentPlacement.UNRELATED)
-                                                .addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(ComponentPlacement.UNRELATED)
-                                                .addComponent(txtResult, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                .addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                                .addGap(35))
-                        .addGroup(groupLayout.createSequentialGroup()
-                                .addGap(201)
-                                .addComponent(txtHeight, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(149, Short.MAX_VALUE))
-                        .addGroup(groupLayout.createSequentialGroup()
-                                .addContainerGap(49, Short.MAX_VALUE)
-                                .addComponent(separator, GroupLayout.PREFERRED_SIZE, 302, GroupLayout.PREFERRED_SIZE)
-                                .addGap(25))
-                        .addGroup(groupLayout.createSequentialGroup()
-                                .addContainerGap(30, Short.MAX_VALUE)
-                                .addComponent(txtRectangularParallelepiped, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(ComponentPlacement.UNRELATED)
-                                .addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
-                                        .addComponent(separator_1, GroupLayout.PREFERRED_SIZE, 302, GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(groupLayout.createSequentialGroup()
-                                                .addComponent(txtSide_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(ComponentPlacement.UNRELATED)
-                                                .addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(ComponentPlacement.UNRELATED)
-                                                .addComponent(txtSide_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                .addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                .addGap(8)
-                                                .addComponent(txtSide_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                .addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18)
-                                                .addComponent(btnNewButton_2)
-                                                .addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-                                                        .addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(textField_8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
-                                .addContainerGap())
+        	groupLayout.createParallelGroup(Alignment.TRAILING)
+        		.addGroup(groupLayout.createSequentialGroup()
+        			.addComponent(btnNewButton_3)
+        			.addGap(5)
+        			.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(txtCubeArea, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(txtPyramidArea, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addPreferredGap(ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+        			.addComponent(txtSide, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        			.addGap(9)
+        			.addComponent(txtSide_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        					.addPreferredGap(ComponentPlacement.UNRELATED)
+        					.addComponent(btnNewButton)
+        					.addGap(18)
+        					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+        						.addComponent(textField_9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(textField_10, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        					.addPreferredGap(ComponentPlacement.RELATED))
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        					.addPreferredGap(ComponentPlacement.UNRELATED)
+        					.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
+        					.addPreferredGap(ComponentPlacement.UNRELATED)
+        					.addComponent(txtResult, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        					.addPreferredGap(ComponentPlacement.RELATED)
+        					.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+        			.addGap(35))
+        		.addGroup(groupLayout.createSequentialGroup()
+        			.addGap(201)
+        			.addComponent(txtHeight, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        			.addContainerGap(149, Short.MAX_VALUE))
+        		.addGroup(groupLayout.createSequentialGroup()
+        			.addContainerGap(49, Short.MAX_VALUE)
+        			.addComponent(separator, GroupLayout.PREFERRED_SIZE, 302, GroupLayout.PREFERRED_SIZE)
+        			.addGap(25))
+        		.addGroup(groupLayout.createSequentialGroup()
+        			.addContainerGap(30, Short.MAX_VALUE)
+        			.addComponent(txtRectangularParallelepiped, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.UNRELATED)
+        			.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
+        				.addComponent(separator_1, GroupLayout.PREFERRED_SIZE, 302, GroupLayout.PREFERRED_SIZE)
+        				.addGroup(groupLayout.createSequentialGroup()
+        					.addComponent(txtSide_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        					.addPreferredGap(ComponentPlacement.UNRELATED)
+        					.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        					.addPreferredGap(ComponentPlacement.UNRELATED)
+        					.addComponent(txtSide_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        					.addPreferredGap(ComponentPlacement.RELATED)
+        					.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        					.addGap(8)
+        					.addComponent(txtSide_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        					.addPreferredGap(ComponentPlacement.RELATED)
+        					.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        					.addGap(18)
+        					.addComponent(btnNewButton_2)
+        					.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+        						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(textField_8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+        			.addContainerGap())
         );
-        frame.getContentPane().setLayout(groupLayout);
+        frmVolumeCalculator.getContentPane().setLayout(groupLayout);
     }
 }
-
-
+ 
